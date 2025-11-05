@@ -30,7 +30,7 @@
 }
 
 .ham {
-  display: none;
+  display: none; /* HIDDEN on desktop by default ✅ */
   font-size: 24px;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -39,7 +39,7 @@
 /* Responsive styles */
 @media (max-width: 768px) {
   .nav-sub {
-    display: none;
+    display: none; /* hidden by default on mobile ✅ */
     flex-direction: column;
     width: 100%;
     background-color: #f2cb2c;
@@ -55,17 +55,12 @@
   }
 
   .ham {
-    display: block;
+    display: block; /* visible on mobile ✅ */
   }
 
   .nav-sub.active {
     display: flex;
     opacity: 1;
     transform: translateY(0);
-  }
-
-  /* When active, rotate or change icon to cross */
-  .ham.active {
-    transform: rotate(90deg);
   }
 }
